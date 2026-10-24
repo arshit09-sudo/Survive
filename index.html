@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080c16">
+
+    <title>SURVIVE — Arena Survival </title>
+
+    <link rel="stylesheet" href="style.css">
+    
+<script src="game.js" defer></script>
+
+</head>
+<body>
+ <main class="game-shell">
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="SURVIVE home">SURVIVE <span></span></a>
+        <div class="topbar-note">ARENA SURVIVAL</div>
+        <button class="sound-toggle" id="soundButton" aria-pressed="true">SOUND: ON</button>
+    </header>
+
+    <section class="game-stage" aria-label="Game area">
+        <canvas id="gameCanvas" aria-label="SURVIVE game canvas"></canvas>
+
+        <div class="hud" id="hud" aria-label="polite">
+        <div class="hud-card health-card">
+            <span class="hud-label">HEALTH</span>
+            <div class="health-row">
+                <div class="health-track">
+                    <div class="health-fill" id="healthFill"></div>
+                </div>
+                <span class="healt-value" id="healthValue">100</span>
+            </div>
+        </div>
+        <div class="hud-card">
+                <span class="hud-label">KNIVES</span>
+                <span class="hud-value" id="knifeCount">3</span>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">TIME</span>
+                <span class="hud-value" id="survivalTime">00:00</span>
+            </div>
+            ,<div class="hud-card">
+                <span class="hud-label">KILLS</span>
+                <span class="hud-value" id="killCount">0</span>
+            </div>
+            <button class="pause-button" id="pauseButton" type="button" aria-label="pausegame">
+                <span></span><span></span>
+            </button>
+        </div>
+
+      <section class="overlay" id="menuOverlay">
+        <div class="overlay-panel">
+            <p class="intro-copy">
+                keep moving. collect knives. Outlast the swarm.
+            </p>
+            <div class="control-hint">
+                <span class="keycap">W</span>
+                <span class="keycap">A</span>
+                <span class="keycap">S</span>
+                <span class="keycap">D</span>
+                
+                <span class="or-text">OR</span>
+
+                <span class="keycap arrow-key">↑</span>
+                <span class="keycap arrow-key">←</span>
+                <span class="keycap arrow-key">→</span>
+                <span class="keycap arrow-key">↓</span>
+
+                <span class="control-caption">TO MOVE</span>
+            </div>
+            <button class="primary-button" id="startButton" type="button">START SURVIVING
+                <span>→</span>
+            </button>
+            <p class="best-time">BEST TIME <strong id="bestTime">00:00</strong></p>
+        </div>
+      </section>
+
+      <section class="overlay hidden" id="pauseOverlay">
+        <div class="overlay-panel compact-panel">
+            <p class="eyebrow">TAKE A BREATH</p>
+            <h2>PAUSED<span>.</span></h2>
+            <p class="intro-copy">The arena is waiting.</p>
+            <button class="primary-button" id="resumeButton" type="button">RESUME <span>→</span></button>
+            <button class="text-button" id="pauseRestartButton" type="button">START OVER</button>
+
+        </div>
+      </section>
+     <section class="overlay hidden" id="gameOverOverlay">
+        <div class="overlay-panel compact-panel">
+            <p class="eyebrow">THE ARENA WINS THIS ROUND</p>
+            <h2>GAME OVER<span>.</span></h2>
+            <div class="results-row">
+                 <div> <span class="hud-label">KILLS</span><strong id="finalKills">0</strong></div>
+        </div>
+        <p class="best-time">BEST TIME <strong id="gameOverBestTime">00:00</strong></p>
+        <button class="primary-button" id="restartButton" type="button">TRY AGAIN<span>→</span></button>
+
+        <button class="text-button" id="mainMenuButton" type="button">MAIN MENU</button>
+        </div>
+     </section>
+     <div class="toast" id="toast" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+        <span>MOVE TO DODGE <b>.</b> ORBIT TO ATTACK</span>
+        <span>EVERY KNIFE COUNTS</span>
+    </footer>
+ </main>
+
+</body>
+</html>
