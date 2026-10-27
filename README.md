@@ -4,7 +4,7 @@ SURVIVE is a 2D survival game which is made using HTML, CSS and javascript.
 The idea is simple : survive in an arena using your orbiting blades to fight enemies, and try to survive as long as you can 
 
 
-here is a screenshot of the actual game : [![SURVIVE gameplay](screenshots/gameplay.png)](screenshots/gameplay.png)
+here is a screenshot of the actual game : [![SURVIVE gameplay](Screenshots/gameplay.png)](Screenshots/gameplay.png)
 
 
 
