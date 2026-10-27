@@ -30,6 +30,7 @@ const finalKills = document.getElementById("finalKills");
 const toast = document.getElementById("toast");
 
 // idea : will add a drop that will boost knife rotating speed
+// idea 2 : will add a feature of shooting knife to enemies who are at a distance by mouse click on them 
 
 
 const ARENA_SCALE = Math.sqrt(10);
@@ -68,6 +69,7 @@ let state = "menu";
 let player;
 let enemies = [];
 let knives = [];
+let bladePickups = [];
 let particles = [];
 let medkits = [];
 let medkitSpawnTimer = 0;
@@ -338,6 +340,15 @@ function spawnEnemy(){
     health: 2,
     attackCooldown: 0
  });
+}
+
+function spawnBladePickup() {
+    if (bladePickups.length >= 10) return;
+
+    bladePickups.push({
+        x: random (30, worldWidth - 30),
+        y: random(30, worldHeight - 30),
+    });
 }
 
 function spawnMedkit(){
